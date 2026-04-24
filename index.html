@@ -1,16 +1,302 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yousef Khaled — Editorial Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yousef Khaled — Editorial Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>YK</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="label">Cairo, Egypt</span>
+        <span class="label label-faded hidden-mobile">30.0444° N, 31.2357° E</span>
+      </div>
+      <div class="topbar-right">
+        <span class="dot"></span>
+        <span class="label" id="cairo-time">--:-- EET</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">YOUSEF KHALED</a>
+      <div class="nav-links hidden-mobile">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#works" class="nav-link">Works</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#works" class="mobile-link">Works</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-sticky">
+      <div class="hero-name" id="hero-name">
+        <h1 class="display-hero">YOUSEF KHALED — YOUSEF KHALED — YOUSEF KHALED — YOUSEF KHALED —</h1>
+      </div>
+      <div class="hero-trio">
+        <span class="side-text" id="left-text">A VISUAL</span>
+        <div class="hero-card" id="hero-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=560&h=590&fit=crop&crop=face" alt="Yousef Khaled" class="hero-img">
+        </div>
+        <span class="side-text" id="right-text">DESIGNER</span>
+      </div>
+      <div class="hero-bottom">
+        <p class="hero-desc">Creating meaningful digital experiences through purposeful design and kinetic storytelling.</p>
+        <div class="scroll-indicator">
+          <span class="label">Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Purposeful Design Section -->
+  <section class="purposeful" id="purposeful">
+    <div class="container">
+      <span class="label label-faded">Purposeful Design</span>
+      <div class="purposeful-lines">
+        <h2 class="display-section line-reveal">CREATING</h2>
+        <h2 class="display-section line-reveal">MEANINGFUL</h2>
+        <h2 class="display-section line-reveal">DESIGN</h2>
+      </div>
+      <p class="purposeful-body">Every project starts with a question: what story needs to be told? I bridge strategy and aesthetics to craft digital experiences that resonate, communicate, and endure.</p>
+    </div>
+  </section>
+
+  <!-- Featured Works Grid -->
+  <section class="featured" id="works">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-faded">Featured Works</span>
+        <h2 class="display-section">SELECTED<br>PROJECTS</h2>
+      </div>
+      <div class="works-grid">
+        <a href="projects/tutorconnect.html" class="work-card work-card-large">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="TutorConnect" class="work-img">
+          </div>
+          <div class="work-info">
+            <h3 class="work-title">TutorConnect</h3>
+            <div class="work-meta">
+              <span class="label">UI/UX Design</span>
+              <span class="label label-faded">2024</span>
+            </div>
+          </div>
+        </a>
+        <a href="projects/the-math-mentor.html" class="work-card">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" alt="The Math Mentor" class="work-img">
+          </div>
+          <div class="work-info">
+            <h3 class="work-title">The Math Mentor</h3>
+            <div class="work-meta">
+              <span class="label">Brand Identity</span>
+              <span class="label label-faded">2023</span>
+            </div>
+          </div>
+        </a>
+        <a href="projects/outline.html" class="work-card">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=600&fit=crop" alt="Outline" class="work-img">
+          </div>
+          <div class="work-info">
+            <h3 class="work-title">Outline</h3>
+            <div class="work-meta">
+              <span class="label">Editorial Design</span>
+              <span class="label label-faded">2024</span>
+            </div>
+          </div>
+        </a>
+        <a href="projects/designitorganized.html" class="work-card work-card-large">
+          <div class="work-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop" alt="DesignItOrganized" class="work-img">
+          </div>
+          <div class="work-info">
+            <h3 class="work-title">DesignItOrganized</h3>
+            <div class="work-meta">
+              <span class="label">Web Design</span>
+              <span class="label label-faded">2023</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kinetic Works List -->
+  <section class="archive" id="archive">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-faded-inv">Archive</span>
+        <h2 class="display-section text-inv">ALL WORKS</h2>
+      </div>
+      <div class="archive-list">
+        <a href="projects/tutorconnect.html" class="archive-item">
+          <div class="archive-left">
+            <span class="label label-faded-inv">01</span>
+            <h3 class="display-list text-inv archive-title">TutorConnect</h3>
+          </div>
+          <div class="archive-right">
+            <span class="label label-faded-inv hidden-mobile">UI/UX Design</span>
+            <span class="label label-faded-inv">2024</span>
+          </div>
+        </a>
+        <a href="projects/the-math-mentor.html" class="archive-item">
+          <div class="archive-left">
+            <span class="label label-faded-inv">02</span>
+            <h3 class="display-list text-inv archive-title">The Math Mentor</h3>
+          </div>
+          <div class="archive-right">
+            <span class="label label-faded-inv hidden-mobile">Brand Identity</span>
+            <span class="label label-faded-inv">2023</span>
+          </div>
+        </a>
+        <a href="projects/outline.html" class="archive-item">
+          <div class="archive-left">
+            <span class="label label-faded-inv">03</span>
+            <h3 class="display-list text-inv archive-title">Outline</h3>
+          </div>
+          <div class="archive-right">
+            <span class="label label-faded-inv hidden-mobile">Editorial Design</span>
+            <span class="label label-faded-inv">2024</span>
+          </div>
+        </a>
+        <a href="projects/designitorganized.html" class="archive-item">
+          <div class="archive-left">
+            <span class="label label-faded-inv">04</span>
+            <h3 class="display-list text-inv archive-title">DesignItOrganized</h3>
+          </div>
+          <div class="archive-right">
+            <span class="label label-faded-inv hidden-mobile">Web Design</span>
+            <span class="label label-faded-inv">2023</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <span class="label label-faded">About</span>
+          <h2 class="display-section">YOUSEF<br>KHALED</h2>
+        </div>
+        <div class="about-right">
+          <p class="about-text">A multidisciplinary designer with a background in law, now crafting digital experiences that bridge strategy and aesthetics. Based in Cairo, working globally.</p>
+          <p class="about-text">My journey from the courtroom to the canvas taught me that great design, like great arguments, requires clarity, conviction, and understanding your audience. Every project I take on is driven by purpose — design should communicate, not just decorate.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">4+</span>
+              <span class="label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5</span>
+              <span class="label">Certifications</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">∞</span>
+              <span class="label">Curiosity</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">2</span>
+              <span class="label">Languages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <span class="label label-faded">Contact</span>
+          <h2 class="display-section">LET'S<br>WORK</h2>
+          <p class="contact-desc">Have a project in mind? Let's create something meaningful together.</p>
+          <div class="contact-links">
+            <a href="mailto:youseefkhald@gmail.com" class="contact-link">youseefkhald@gmail.com</a>
+            <a href="https://www.linkedin.com/in/yousef-khaled-mo5" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label class="label" for="name">Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="label" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label class="label" for="message">Message</label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="marquee-wrap">
+      <div class="marquee" id="marquee">
+        <span class="marquee-text">LET'S TALK</span>
+        <span class="marquee-sep">—</span>
+        <span class="marquee-text">LET'S TALK</span>
+        <span class="marquee-sep">—</span>
+        <span class="marquee-text">LET'S TALK</span>
+        <span class="marquee-sep">—</span>
+        <span class="marquee-text">LET'S TALK</span>
+        <span class="marquee-sep">—</span>
+        <span class="marquee-text">LET'S TALK</span>
+        <span class="marquee-sep">—</span>
+        <span class="marquee-text">LET'S TALK</span>
+        <span class="marquee-sep">—</span>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <span class="label label-faded-inv">Cairo, Egypt</span>
+          <a href="mailto:youseefkhald@gmail.com" class="footer-link">youseefkhald@gmail.com</a>
+          <a href="https://www.linkedin.com/in/yousef-khaled-mo5" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        </div>
+        <span class="label label-faded-inv">© 2025 Yousef Khaled. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
