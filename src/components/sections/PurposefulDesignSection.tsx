@@ -1,12 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from '../../lib/gsap';
 
-const lines = [
-  'CREATING',
-  'DESIGN',
-  'WITH',
-  'MEANING',
-];
+const lines = ['CREATING', 'DESIGN', 'WITH', 'MEANING'];
 
 export function PurposefulDesignSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -26,9 +21,9 @@ export function PurposefulDesignSection() {
             y: 0,
             opacity: 1,
             scale: 1,
-            duration: 0.8,
+            duration: 0.9,
             ease: 'power3.out',
-            delay: index * 0.1,
+            delay: index * 0.12,
             scrollTrigger: {
               trigger: line,
               start: 'top 85%',
@@ -45,15 +40,16 @@ export function PurposefulDesignSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-bg-brown text-text-inverse py-32 md:py-48 px-6 md:px-12 overflow-hidden"
+      className="bg-[#5C3D2E] text-[#F5F5F0] py-32 md:py-48 px-5 md:px-10 overflow-hidden"
     >
-      <div className="max-w-[1400px] mx-auto">
-        <div className="mb-16">
-          <span className="font-body text-xs uppercase tracking-widest text-text-inverse/50">
-            Philosophy
+      <div className="max-w-[1600px] mx-auto">
+        <div className="mb-16 md:mb-20">
+          <span className="font-body text-label text-[rgba(245,245,240,0.45)]">
+            Purposeful Design
           </span>
         </div>
-        <div className="space-y-2">
+
+        <div className="space-y-1 md:space-y-2">
           {lines.map((line, index) => (
             <div key={index} className="overflow-hidden">
               <div
@@ -62,15 +58,16 @@ export function PurposefulDesignSection() {
                 }}
                 className="will-change-transform"
               >
-                <h2 className="font-display text-display-section leading-none tracking-tight">
+                <h2 className="font-display text-display-section leading-[0.9] tracking-tight text-[#F5F5F0]">
                   {line}
                 </h2>
               </div>
             </div>
           ))}
         </div>
-        <div className="mt-16 max-w-md">
-          <p className="font-body text-base leading-relaxed text-text-inverse/70">
+
+        <div className="mt-16 md:mt-24 max-w-md">
+          <p className="font-body text-base md:text-lg leading-relaxed text-[rgba(245,245,240,0.65)]">
             Every project begins with a question: what is this for? I believe design should
             serve a purpose beyond aesthetics — it should communicate, connect, and create
             lasting impact.

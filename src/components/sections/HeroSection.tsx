@@ -19,17 +19,19 @@ export function HeroSection() {
     if (!section || !nameEl || !cardEl || !leftText || !rightText) return;
 
     const ctx = gsap.context(() => {
+      // Horizontal scroll on the name - moves left as user scrolls
       gsap.to(nameEl, {
-        x: '-30%',
+        x: '-40%',
         ease: 'none',
         scrollTrigger: {
           trigger: section,
           start: 'top top',
           end: 'bottom top',
-          scrub: 1,
+          scrub: 0.8,
         },
       });
 
+      // Parallax: center card moves up slightly
       gsap.to(cardEl, {
         y: -60,
         scale: 0.96,
@@ -38,10 +40,11 @@ export function HeroSection() {
           trigger: section,
           start: 'top top',
           end: 'bottom top',
-          scrub: 1,
+          scrub: 0.5,
         },
       });
 
+      // Parallax: side texts move horizontally at different speeds
       gsap.to(leftText, {
         x: -120,
         ease: 'none',
@@ -71,30 +74,32 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[150vh] bg-bg-primary overflow-hidden pt-20"
+      className="relative min-h-[180vh] bg-[#F5F5F0] overflow-hidden"
     >
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
+        {/* Scrolling oversized name - moves horizontally */}
         <div
           ref={nameRef}
           className="absolute whitespace-nowrap will-change-transform"
-          style={{ left: '5%' }}
+          style={{ left: '-10%' }}
         >
-          <h1 className="font-display text-display-hero leading-none tracking-tight text-text-primary">
-            YOUSEF KHALED — YOUSEF KHALED — YOUSEF KHALED —
+          <h1 className="font-display text-display-hero tracking-tight text-[#1A1A1A]">
+            YOUSEF KHALED&ensp;—&ensp;YOUSEF KHALED&ensp;—&ensp;YOUSEF KHALED&ensp;—&ensp;YOUSEF KHALED&ensp;—
           </h1>
         </div>
 
-        <div className="relative z-10 flex items-center justify-center gap-8 md:gap-16 px-6">
+        {/* Parallax trio: left text | center card | right text */}
+        <div className="relative z-10 flex items-center justify-center gap-8 md:gap-16 lg:gap-24 px-6 mt-8 md:mt-12">
           <span
             ref={leftTextRef}
-            className="font-body text-xs md:text-sm uppercase tracking-[0.2em] text-text-primary/60 will-change-transform hidden md:block"
+            className="font-display text-[clamp(24px,4vw,48px)] leading-none tracking-tight text-[rgba(26,26,26,0.3)] will-change-transform hidden md:block"
           >
-            A Visual
+            A VISUAL
           </span>
 
           <div
             ref={cardRef}
-            className="relative w-[200px] md:w-[280px] aspect-[170/179] will-change-transform"
+            className="relative w-[180px] md:w-[240px] lg:w-[280px] aspect-[170/179] will-change-transform flex-shrink-0"
           >
             <img
               src={HERO_IMAGE}
@@ -105,16 +110,23 @@ export function HeroSection() {
 
           <span
             ref={rightTextRef}
-            className="font-body text-xs md:text-sm uppercase tracking-[0.2em] text-text-primary/60 will-change-transform hidden md:block"
+            className="font-display text-[clamp(24px,4vw,48px)] leading-none tracking-tight text-[rgba(26,26,26,0.3)] will-change-transform hidden md:block"
           >
-            Designer
+            DESIGNER
           </span>
         </div>
 
-        <div className="absolute bottom-12 left-6 md:left-12">
-          <p className="font-body text-xs uppercase tracking-widest text-text-primary/50 max-w-xs">
+        {/* Bottom descriptor */}
+        <div className="absolute bottom-10 left-5 md:left-10">
+          <p className="font-body text-[11px] md:text-xs uppercase tracking-[0.15em] text-[rgba(26,26,26,0.4)] max-w-[280px]">
             Creating meaningful digital experiences through purposeful design and kinetic storytelling.
           </p>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 right-5 md:right-10 flex flex-col items-center gap-2">
+          <span className="font-body text-[10px] uppercase tracking-[0.2em] text-[rgba(26,26,26,0.35)]">Scroll</span>
+          <div className="w-[1px] h-8 bg-gradient-to-b from-[rgba(26,26,26,0.3)] to-transparent" />
         </div>
       </div>
     </section>

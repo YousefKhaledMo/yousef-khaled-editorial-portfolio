@@ -1,40 +1,55 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-primary: #F5F5F0;
-  --color-bg-brown: #5C3D2E;
-  --color-bg-dark: #1A1A1A;
-  --color-text-primary: #1A1A1A;
-  --color-text-inverse: #F5F5F0;
-  --color-border-light: rgba(26, 26, 26, 0.15);
+  --color-cream: #F5F5F0;
+  --color-brown: #5C3D2E;
+  --color-dark: #1A1A1A;
+  --color-dark-soft: #2A2A2A;
+  --color-text: #1A1A1A;
+  --color-text-inv: #F5F5F0;
+  --color-text-muted: rgba(26, 26, 26, 0.5);
+  --color-text-muted-inv: rgba(245, 245, 240, 0.5);
+  --color-border: rgba(26, 26, 26, 0.12);
+  --color-border-inv: rgba(245, 245, 240, 0.12);
 
   --font-display: 'Bebas Neue', sans-serif;
   --font-body: 'Space Grotesk', sans-serif;
 
-  --animate-marquee: marquee 20s linear infinite;
+  --animate-marquee: marquee 25s linear infinite;
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
+  0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: 'Space Grotesk', sans-serif;
   background-color: #F5F5F0;
   color: #1A1A1A;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 ::selection {
   background-color: #1A1A1A;
   color: #F5F5F0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .font-display {
@@ -46,13 +61,38 @@ body {
 }
 
 .text-display-hero {
-  font-size: clamp(80px, 15vw, 200px);
+  font-size: clamp(70px, 14vw, 200px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
 }
 
 .text-display-section {
   font-size: clamp(60px, 10vw, 140px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
 }
 
 .text-display-list {
   font-size: clamp(48px, 8vw, 100px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.text-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .text-display-hero {
+    font-size: clamp(50px, 18vw, 140px);
+  }
+  .text-display-section {
+    font-size: clamp(44px, 14vw, 100px);
+  }
+  .text-display-list {
+    font-size: clamp(36px, 12vw, 64px);
+  }
 }

@@ -10,7 +10,7 @@ function AppContent() {
   useSmoothScroll();
 
   return (
-    <div className="min-h-screen bg-bg-primary">
+    <div className="min-h-screen bg-[#F5F5F0]">
       <TopBar />
       <Navigation />
       <Routes>
