@@ -2,6 +2,6 @@
   "name": "yousef-khaled-editorial-portfolio",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'Static site - no build needed'"
+    "build": "node build.js"
   }
 }
