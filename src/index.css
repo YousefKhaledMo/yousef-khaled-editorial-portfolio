@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #F5F5F0;
+  --color-bg-brown: #5C3D2E;
+  --color-bg-dark: #1A1A1A;
+  --color-text-primary: #1A1A1A;
+  --color-text-inverse: #F5F5F0;
+  --color-border-light: rgba(26, 26, 26, 0.15);
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+
+  --animate-marquee: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #F5F5F0;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.text-display-hero {
+  font-size: clamp(80px, 15vw, 200px);
+}
+
+.text-display-section {
+  font-size: clamp(60px, 10vw, 140px);
+}
+
+.text-display-list {
+  font-size: clamp(48px, 8vw, 100px);
+}
